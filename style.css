@@ -1,0 +1,53 @@
+/* CSS Variables for theming */
+:root {
+    --bg-color: #f8f8f8;
+    --text-color: #111111;
+    --text-muted-color: #525252;
+    --accent-color: #4f46e5; /* Indigo */
+    --accent-text-color: #4f46e5;
+    --card-bg-color: #e5e5e5;
+    --selection-bg: #4f46e5;
+    --selection-text: #ffffff;
+}
+
+.dark {
+    --bg-color: #111111;
+    --text-color: #E2E2E2;
+    --text-muted-color: #a3a3a3;
+    --accent-color: #A3E635; /* Lime */
+    --accent-text-color: #A3E635;
+    --card-bg-color: #262626;
+    --selection-bg: #A3E635;
+    --selection-text: #111111;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+    background-color: var(--selection-bg);
+    color: var(--selection-text);
+}
+
+/* Gradient background */
+#gradient-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at center, hsla(210, 80%, 60%, 0.2), hsla(330, 80%, 60%, 0.2), hsla(150, 80%, 60%, 0.2));
+    background-position: var(--x) var(--y);
+    filter: blur(100px);
+    z-index: -1;
+    opacity: 0.5;
+    transition: background-position 0.1s ease-out;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar { display: none; }
+html { -ms-overflow-style: none; scrollbar-width: none; }

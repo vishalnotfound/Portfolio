@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="dark"> <!-- Start in dark mode by default -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal Verma — Full Stack Developer</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- GSAP (GreenSock Animation Platform) & ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="antialiased">
+
+    <!-- Gradient Background -->
+    <div id="gradient-bg"></div>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300">
+        <div class="mx-auto max-w-6xl px-6 md:px-10 flex justify-between items-center">
+            <a href="#" id="nav-home" class="text-2xl font-bold tracking-tighter text-neutral-800 dark:text-neutral-200">VISHAL</a>
+            <div class="hidden md:flex items-center gap-8 text-lg text-neutral-800 dark:text-neutral-200">
+                <a href="#work" class="nav-link hover:text-indigo-600 dark:hover:text-lime-400 transition-colors">Projects</a>
+                <a href="#about" class="nav-link hover:text-indigo-600 dark:hover:text-lime-400 transition-colors">About</a>
+                <a href="#contact" class="nav-link hover:text-indigo-600 dark:hover:text-lime-400 transition-colors">Contact</a>
+            </div>
+            <div class="flex items-center">
+                 <!-- Resume Button -->
+                <a href="https://drive.google.com/file/d/11golUxXNWZw8qfEoTMvD1CzMPQ2XyKI6/view?usp=drive_link" class="bg-neutral-800 text-neutral-200 dark:bg-neutral-200 dark:text-neutral-800 px-5 py-2 rounded-full font-semibold text-sm hover:opacity-90 transition-opacity">
+                    Resume
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main Container -->
+    <div class="mx-auto max-w-6xl px-6 md:px-10">
+
+        <!-- Header/Hero Section -->
+        <header class="min-h-screen flex flex-col justify-center items-center text-center py-20">
+            <div class="w-full">
+                <h1 class="text-6xl md:text-9xl font-bold tracking-tighter overflow-hidden">
+                    <span class="inline-block hero-text">Vishal Verma</span>
+                </h1>
+                <div class="overflow-hidden">
+                    <p class="hero-text text-2xl md:text-3xl font-medium text-indigo-600 dark:text-lime-400 mt-6">
+                        Computer Science Undergrad
+                    </p>
+                </div>
+                <div class="overflow-hidden">
+                    <p class="hero-text text-xl md:text-2xl text-neutral-500 dark:text-neutral-400 mt-4 max-w-3xl mx-auto">
+                        A Software Developer with skill in Full Stack Web Development, Responsive UI, Data Structure and Algorithm and other Computer Science Concepts.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Projects Section -->
+            <section id="work" class="py-16">
+                <h3 class="text-4xl md:text-5xl font-bold tracking-tighter mb-12 section-title">Projects-</h3>
+                
+                <div class="flex flex-col gap-16">
+                    <!-- Projects Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                        <!-- Project 1 -->
+                        <div class="project-card">
+                            <a href="https://my-shop-e-com.vercel.app/" target="_blank" class="group block overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800">
+                                <img src="myShop.png" alt="E-Commerce Application Mockup" class="w-full h-auto object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-105">
+                            </a>
+                            <div class="mt-4 text-left">
+                                <h4 class="text-lg font-semibold">E-Commerce Application</h4>
+                                <p class="text-neutral-500 dark:text-neutral-400 mt-1 text-sm">A full-stack app with authentication and product management.</p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <span class="bg-neutral-200 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-300 px-3 py-1 rounded-full text-xs">MERN Stack</span>
+                                    <span class="bg-neutral-200 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-300 px-3 py-1 rounded-full text-xs">JWT</span>
+                                    <span class="bg-neutral-200 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-300 px-3 py-1 rounded-full text-xs">Responsive UI</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="project-card">
+                            <a href="https://vishalnotfound.github.io/currency-converter/" target="_blank" class="group block overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800">
+                                <img src="currency convertor.png" alt="Currency Converter App Mockup" class="w-full h-auto object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-105">
+                            </a>
+                             <div class="mt-4 text-left">
+                                <h4 class="text-lg font-semibold">Currency Converter Application</h4>
+                                <p class="text-neutral-500 dark:text-neutral-400 mt-1 text-sm">A real-time currency converter that fetches live exchange rates using an API.</p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <span class="bg-neutral-200 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-300 px-3 py-1 rounded-full text-xs">HTML</span>
+                                    <span class="bg-neutral-200 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-300 px-3 py-1 rounded-full text-xs">CSS</span>
+                                    <span class="bg-neutral-200 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-300 px-3 py-1 rounded-full text-xs">JavaScript</span>
+                                     <span class="bg-neutral-200 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-300 px-3 py-1 rounded-full text-xs">Fetch API</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Full-width Article Card -->
+                    <div id="article" class="project-card pt-8">
+                        <a href="https://medium.com/@ping4vishal/the-unpredictability-of-uninitialized-variables-in-c-c-e0215c28d05f" target="_blank" class="group block p-8 md:p-10 bg-neutral-200 dark:bg-neutral-800 rounded-xl hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-colors duration-300">
+                            <div class="text-left">
+                                <h4 class="text-xl font-semibold">Published Article: The Unpredictability of Uninitialized Variables</h4>
+                                <p class="text-neutral-500 dark:text-neutral-400 mt-2 text-base">An in-depth look at memory management and potential pitfalls for developers working with C/C++.</p>
+                                <div class="flex flex-wrap gap-3 mt-5">
+                                    <span class="bg-neutral-50 text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 px-3 py-1 rounded-full text-sm">C++</span>
+                                    <span class="bg-neutral-50 text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 px-3 py-1 rounded-full text-sm">Web Article</span>
+                                    <span class="bg-neutral-50 text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 px-3 py-1 rounded-full text-sm">Medium</span>
+                                </div>
+                                <span class="inline-block mt-6 text-indigo-600 dark:text-lime-400 font-semibold group-hover:underline">
+                                    Read on Medium →
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Me Section -->
+            <section id="about" class="py-16">
+                 <h3 class="text-4xl md:text-5xl font-bold tracking-tighter mb-12 section-title">About Me-</h3>
+                 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+                    <div class="md-col-span-1 about-image">
+                        <div class="aspect-square rounded-xl overflow-hidden">
+                           <img src="profile pic.png" alt="Portrait of Vishal Verma" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="md:col-span-2 about-text">
+                        <p class="text-lg leading-relaxed text-neutral-600 dark:text-neutral-300">
+                           Computer Science undergraduate skilled in full-stack development with a strong focus on front-end and UI design. Experienced in building responsive, user-friendly web applications using React and modern web technologies.
+                        </p>
+                        <div class="mt-8">
+                            <h5 class="text-lg font-semibold text-indigo-600 dark:text-lime-400 mb-4">My Toolbox</h5>
+                            <div class="flex flex-wrap gap-x-4 gap-y-3">
+                                <span class="text-lg font-semibold">HTML</span>
+                                <span class="text-lg font-semibold">CSS</span>
+                                <span class="text-lg font-semibold">JavaScript</span>
+                                <span class="text-lg font-semibold">React.js</span>
+                                <span class="text-lg font-semibold">Node.js</span>
+                                <span class="text-lg font-semibold">Express.js</span>
+                                <span class="text-lg font-semibold">Axios API</span>
+                                <span class="text-lg font-semibold">Fetch API</span>
+                                <span class="text-lg font-semibold">Tailwind CSS</span>
+                                <span class="text-lg font-semibold">C++</span>
+                                <span class="text-lg font-semibold">Python</span>
+                                <span class="text-lg font-semibold">GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer / Contact Section -->
+    <footer id="contact" class="py-20">
+        <div class="mx-auto max-w-6xl px-6 md:px-10">
+            <div class="contact-section bg-neutral-200 dark:bg-neutral-800 text-center p-10 md:p-20 rounded-xl">
+                <h3 class="text-4xl md:text-6xl font-bold tracking-tighter">Let's create something</h3>
+                <h3 class="text-4xl md:text-6xl font-bold tracking-tighter text-indigo-600 dark:text-lime-400">memorable.</h3>
+                <p class="text-neutral-600 dark:text-neutral-300 max-w-xl mx-auto mt-6 text-lg">
+                    Have a project in mind or just want to say hello? My inbox is always open.
+                </p>
+                <a href="mailto:vishalx343@gmail.com" class="inline-block text-xl md:text-2xl font-medium mt-8 relative group">
+                    <span>vishalx343@gmail.com</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 dark:bg-lime-400 transition-all duration-500 group-hover:w-full"></span>
+                </a>
+                <div class="flex justify-center gap-4 mt-10">
+                    <a href="https://linkedin.com/in/vishalx343" target="_blank" class="bg-neutral-50 text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 px-6 py-3 rounded-full font-semibold hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors duration-300">LinkedIn</a>
+                    <a href="https://github.com/vishalnotfound" target="_blank" class="bg-neutral-50 text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 px-6 py-3 rounded-full font-semibold hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors duration-300">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Your Custom JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
