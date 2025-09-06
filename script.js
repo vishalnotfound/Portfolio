@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    // --- GRADIENT BACKGROUND ---
+    // --- GRADIENT BACKGROUND --- //
     const gradientBg = document.getElementById('gradient-bg');
     window.addEventListener('mousemove', (e) => {
         const { clientX, clientY } = e;
